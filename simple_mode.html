@@ -1,0 +1,713 @@
+<html>
+
+<head>
+    <title>Simple Mode</title>
+    <link rel="stylesheet" href="Quize.css">
+    <link rel="stylesheet" href="mquize.css">
+</head>
+
+<body style="background-color: rgb(28, 28, 80);">
+    <div id="timer"></div>
+    <div id="con1">
+        <div id="questions">
+            <h2 id="question_main">here come your question </h2>
+        </div>
+        <div id="options">
+            <div id="option_ab">
+                <div class="marg" id="optionA"><span id="opa">A:<span id="A">option A </span></span></div>
+                <div class="marg" id="optionB"><span id="opb">B:<span id="B">option B </span></span></div>
+            </div>
+            <div id="option_cd">
+                <div class="marg" id="optionC"><span id="opc">C:<span id="C">option C</span></span></div>
+                <div class="marg" id="optionD"><span id="opd">D:<span id="D">option D </span></span></div>
+            </div>
+        </div>
+
+
+    </div>
+    <div id="buttons">
+        <button id="start"><a href="index.html">Back to Menu</a></button>
+        <button id="next">Next Question</button>
+
+    </div>
+    <div id="end"></div>
+</body>
+<script>
+
+    //creating the all the questionsa  ans storing in to the an array called a as bellow
+    let a = [
+        {
+            question: "Q1 : Who is the father of our Nation ?",
+            optionA: "Mahatma Gandhi",
+            optionB: "Jawaharlal Neahru",
+            optionC: "Lal Bahadur Shastri",
+            optionD: "none of the above",
+            ans: "Mahatma Gandhi"
+        },
+
+        {
+            question: "Q2 : Who is the first president of india ?",
+            optionA: "javaharlal Neharu",
+            optionB: "none of the above",
+            optionC: "Dr.Rajendra prasad",
+            optionD: "Lal Bahadur Shastri",
+            ans: "Dr.Rajendra prasad"
+        },
+
+        {
+            question: "Q3 : Which is the most sensitive Organ in  our body ?",
+            optionA: "Legs",
+            optionB: "Head",
+            optionC: "Skin",
+            optionD: "Nose",
+            ans: "Skin"
+        },
+
+        {
+            question: "Q4 : Who invented Computer ?",
+            optionA: "Charles babbage",
+            optionB: "Archimedes",
+            optionC: "Dennise Ritchie",
+            optionD: "Bjarne Strourstrop",
+            ans: "Charles babbage"
+        },
+
+        {
+            question: "Q5 : Brain of Computer is  ?",
+            optionA: "CPU",
+            optionB: "RAM",
+            optionC: "Key board",
+            optionD: "Desktop",
+            ans: "CPU"
+        },
+
+        {
+            question: "Q6 : Giddha is a folk dance of Which State  ?",
+            optionA: "Karanataka",
+            optionB: "Maharastra",
+            optionC: "Punjab",
+            optionD: "none of the above",
+            ans: "Punjab"
+        },
+
+        {
+            question: "Q7 : 1024 kilobytes is equal to  ?",
+            optionA: "1 Mega byte(MB)",
+            optionB: "1 tera byte(TB)",
+            optionC: "none of the above",
+            optionD: "1 Kilobyte(KB)",
+            ans: "1 Mega byte(MB)"
+        },
+
+        {
+            question: "Q8 : India lies in Which Continent ?",
+            optionA: "Asia",
+            optionB: "Africa",
+            optionC: "America",
+            optionD: "none of the above",
+            ans: "Asia"
+        },
+
+
+        {
+            question: "Q9 : which animal is known as the 'Ship of the Desert' ?",
+            optionA: "Lion",
+            optionB: "Elephent",
+            optionC: "Camel",
+            optionD: "Ship",
+            ans: "Camel"
+        }
+
+
+    ]
+
+    let nextb = document.getElementById("next") //accesing next button id
+    console.log(a[0])
+
+
+    //accesing all the answers and option by its id as shown bellow
+    let questions = document.getElementById("question_main")
+    let optionA = document.getElementById("A")
+    let optionB = document.getElementById("B")
+    let optionC = document.getElementById("C")
+    let optionD = document.getElementById("D")
+
+    let optionA1 = document.getElementById("optionA")
+    let optionB1 = document.getElementById("optionB")
+    let optionC1 = document.getElementById("optionC")
+    let optionD1 = document.getElementById("optionD")
+
+
+    //add function is creating to set initial question and answer option
+    function add() {
+        let set = a[0]
+        questions.innerHTML = set.question;
+        optionA.innerHTML = set.optionA;
+        optionB.innerHTML = set.optionB;
+        optionC.innerHTML = set.optionC;
+        optionD.innerHTML = set.optionD;
+    }
+    add() //calling the add function
+
+    nextb.addEventListener("click", run)   //adding click event ont next btn
+    let i = 0; //here we are initializing the value of i 
+    // when we click on the next button i value is going to increase
+
+    let j = 1;
+
+    //run function is creating to incrementing  questions and options 
+    function run() {
+        i += 1 // increamenting the value of i by 1
+        questions.innerHTML = a[i].question;
+        optionA.innerHTML = a[i].optionA;
+        optionB.innerHTML = a[i].optionB;
+        optionC.innerHTML = a[i].optionC;
+        optionD.innerHTML = a[i].optionD;
+
+    }
+
+    let answers = []  //craeting the array for storing all the answer
+    let ans1 = a[0].ans;
+    answers.push(ans1)  //pusing answer 1 in array
+
+    let ans2 = a[1].ans;
+    answers.push(ans2)  //pushing answer 2 in array
+
+    let ans3 = a[2].ans;
+    answers.push(ans3)   //pushing answer 3 in array
+
+    let ans4 = a[3].ans;
+    answers.push(ans4)   //pushing answer 4 in array
+
+    let ans5 = a[4].ans;
+    answers.push(ans5)   //pushing answer 5 in array
+
+    let ans6 = a[5].ans;
+    answers.push(ans6)  //pushing answer 6 in array
+
+    let ans7 = a[6].ans;
+    answers.push(ans7)  //pushing answer 7 in array
+
+    let ans8 = a[7].ans;
+    answers.push(ans8)  //pushing answer 8 in array
+
+    let ans9 = a[8].ans;
+    answers.push(ans9)
+
+
+    //adding click event on all the options
+    optionA1.addEventListener("click", opA)
+    optionB1.addEventListener("click", opB)
+    optionC1.addEventListener("click", opC)
+    optionD1.addEventListener("click", opD)
+    console.log(j)
+
+
+    let score = 0  //setting the scrore as 0 
+
+    //this function is called when we click on optionA
+
+    function opA() {
+        console.log(a[i].optionA)
+        console.log(answers[i])
+        op1 = a[i].optionA
+        if (a[i].optionA == answers[i]) {
+
+            //if the click option is equal to the answer then  option will become green
+            optionA1.style.background = "green"
+            score++  //increamenting the value of score
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)" //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else {
+            //if click option is not  equal to the answer then option will become red 
+            optionA1.style.background = "red"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+
+        }
+
+        if (i == 0) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 1) {
+            optionC1.style.background = "green"
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 2) {
+            optionC1.style.background = "green"
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 3) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 4) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 5) {
+            optionC1.style.background = "green"
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 6) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 7) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 8) {
+            optionC1.style.background = "green"
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    //this function is called when we click on optionB
+    function opB() {
+        console.log(a[i].optionB)
+        console.log(answers[i])
+        if (a[i].optionB == answers[i]) {
+            //if the click option is equal to the answer then  option will become green
+            optionB1.style.background = "green"
+            score++  //increamenting the value of score
+            setTimeout(() => {
+                optionB1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else {
+            //if click option is not  equal to the answer then option will become red 
+            optionB1.style.background = "red"
+
+            setTimeout(() => {
+                optionB1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+
+        if (i == 0) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 1) {
+            optionC1.style.background = "green"
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 2) {
+            optionC1.style.background = "green"
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 3) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 4) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 5) {
+            optionC1.style.background = "green"
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 6) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 7) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 8) {
+            optionC1.style.background = "green"
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+    }
+
+
+
+
+
+
+
+
+
+    //this function is called when we click on optionC
+    function opC() {
+        console.log(a[i].optionC)
+        console.log(answers[i])
+        if (a[i].optionC == answers[i]) {
+            //if the click option is equal to the answer then  option will become green
+            optionC1.style.background = "green"
+            score++   //increamenting the value of score
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else {
+            //if click option is not  equal to the answer then option will become red 
+            optionC1.style.background = "red"
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+
+        if (i == 0) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 1) {
+            optionC1.style.background = "green"
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 2) {
+            optionC1.style.background = "green"
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 3) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 4) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 5) {
+            optionC1.style.background = "green"
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 6) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 7) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 8) {
+            optionC1.style.background = "green"
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+    }
+
+
+
+
+
+
+
+
+    //this function is called when we click on optionD
+    function opD() {
+        console.log(a[i].optionD)
+        console.log(answers[i])
+        if (a[i].optionD == answers[i]) {
+            //if the click option is equal to the answer then  option will become green
+            optionD1.style.background = "green"
+            score++  //increamenting the value of score
+            setTimeout(() => {
+                optionD1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else {
+            //if click option is not  equal to the answer then option will become red 
+            optionD1.style.background = "red"
+            setTimeout(() => {
+                optionD1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+
+        if (i == 0) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 1) {
+            optionC1.style.background = "green"
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 2) {
+            optionC1.style.background = "green"
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 3) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 4) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 5) {
+            optionC1.style.background = "green"
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 6) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 7) {
+            optionA1.style.background = "green"
+            setTimeout(() => {
+                optionA1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+        else if (i == 8) {
+            optionC1.style.background = "green"
+            setTimeout(() => {
+                optionC1.style.background = "rgb(28, 28, 80)"
+                //after 1 sec green color will become  original color
+                //for that we are using set time interval
+            }, 1000)
+        }
+    }
+
+
+
+
+    let con1 = document.getElementById("con1") // getting all area of question and options
+    let t = document.getElementById("timer") // getting time area value
+    let end = document.getElementById("end")  // geting end area for printing the result
+    let menu = document.getElementById("start")  //getting  the start or (menu )
+    let time; //declaring the time varialble
+
+
+
+
+    function timer() {
+        time = 59;  //seeting the timmer 
+        setInterval(() => {
+
+            //setinterval is used to decraes the value of timmer
+            t.innerHTML = time--
+            if (time == 0) {
+                //if time is queal to zero 
+                //it will dispaly none all the question area and options 
+                time = 5;
+                con1.style.display = " none "
+                nextb.style.display = "none"
+
+                menu.classList.add("size")
+
+                // creating new div  display score and show the game over
+                let gameover = document.createElement("div")
+                gameover.id = "game"
+                gameover.innerHTML = `<h1>TIME OUT <br>  YOUR SCORE IS <br> ${score}</h1>`
+                end.appendChild(gameover);
+
+
+                t.style.display = "none"
+            }
+            else if (i == 9) {
+                //if all questions are got over then it will  show game over message and score
+                time = 45;
+                con1.style.display = " none "
+                nextb.style.display = "none"
+                menu.classList.add("size")
+                let gameover = document.createElement("div")
+                gameover.id = "game"
+                if (score == 0) {
+                    gameover.innerHTML = `<h1 style="color red">!!!! SORRY !!!! <br> YOUR SCORE IS <br> ${score} <br> TRY AGAIN</h1>`
+                    gameover.style.color = "red"
+
+                }
+                else if (score >= 1 && score <= 6) {
+                    gameover.innerHTML = `<h1>NOT BAD  <br>  YOUR SCORE IS <br> ${score}</h1>`
+                }
+                else if (score >= 7) {
+                    gameover.innerHTML = `<h1> WELL DONE  <br> YOUR SCORE IS <br> ${score}</h1>
+                    <br>`
+
+
+                }
+                end.appendChild(gameover);
+
+                t.style.display = "none"
+                // break
+            }
+
+        }, 1000)
+
+
+
+    }
+
+    timer()//calling the time function
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

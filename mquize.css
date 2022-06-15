@@ -1,0 +1,155 @@
+@media (max-width:1350px) {
+    #optionA
+    {
+        width: 25rem;
+        height: 3.5rem;
+        font-size: 1.8rem;
+        margin-left:2rem;
+    }
+    #optionB
+    {
+        width: 25rem;
+        height: 3.5rem;
+        font-size: 1.8rem;
+        margin-left:2rem;
+    }
+    #optionC
+    {
+        width: 25rem;
+        height: 3.5rem;
+        font-size: 1.8rem;
+        margin-left:2rem;
+    }
+    #optionD
+    {
+        width: 25rem;
+        height: 3.5rem;
+        font-size: 1.8rem;
+        margin-left:2rem;
+    }
+    
+}
+@media (max-width:1160px) {
+    #option_ab
+    {
+        display: flex;
+        flex-direction: column;
+    }  
+    #questions
+    {
+        height: 20vh;
+    }
+    #option_cd
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    #optionA
+    {
+        margin-top: 5rem;
+        font-size: 2.5rem;
+        width: 90vw;
+        height: 6rem;
+        margin-left: 14%;
+    }
+    #optionB
+    {
+        margin-top: 5rem;
+        width: 90vw;
+        font-size: 2.5rem;
+        margin-left: 14%;
+        height: 6rem;
+    }
+    #optionC
+    {
+        margin-top: 5rem;
+        font-size: 2.5rem;
+        margin-left: 14%;
+        width: 90vw;
+        height: 6rem;
+    }
+    #optionD
+    {
+        margin-top: 5rem;
+        margin-left: 14%;
+        font-size: 2.5rem;
+        width: 90vw;
+        height: 6rem;
+    }
+    .marg
+    {
+        margin-top: 6rem;
+    }
+    #question_main
+    {
+        font-size: 2.5rem;
+    }
+    #options
+    {
+        margin-top: 2rem;
+    }
+    *
+    {
+        overflow-y: hidden;
+    }
+   
+}
+@media (max-width:900px)
+{
+    #optionA
+    {
+        font-size: 2.5rem;
+        margin-top: 5rem;
+        width: 90vw;
+
+    }
+    #optionB
+    {
+        font-size: 2.5rem;
+        margin-top: 5rem;
+        width: 90vw;
+    }
+    #optionC
+    {
+        font-size: 2.5rem;
+        margin-top: 5rem;
+        width: 90vw;
+    }
+    #optionD
+    {
+        font-size: 2.5rem;
+        margin-top: 5rem;
+        width: 90vw;
+    }
+    #game
+    {
+        font-size: 4.5rem;
+    }
+    #timer
+    {
+        font-size: 2rem;
+    }
+    #start
+    {
+        width: 15rem;
+        height:3rem;
+        margin-left: 10px;
+        font-size: 1rem;
+    }
+    #next
+    {
+        width: 15rem;
+        height:3rem;
+        margin-left: 10px;
+        font-size: 1.9rem;
+    }
+    #options
+    {
+        margin-top: 13rem;
+    }
+    #buttons
+{
+    text-align: center;
+    margin-top: 5rem;
+}
+}
