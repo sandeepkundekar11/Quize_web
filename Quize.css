@@ -221,6 +221,10 @@ html
     background-color: brown;
     color: white;
 }
+
+@media (max-width:900px)
+    
+{        
 #game
 {
     color: white;
@@ -231,6 +235,20 @@ html
     text-align: center;
     margin-top: 23rem;
     font-size: 6.3rem;
+}
+}
+
+
+#game
+{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    text-align: center;
+    margin-top: 16rem;
+    font-size: 4.5rem;
 }
 
 
