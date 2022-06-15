@@ -222,21 +222,7 @@ html
     color: white;
 }
 
-@media (max-width:900px)
-    
-{        
-#game
-{
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-style: italic;
-    text-align: center;
-    margin-top: 33rem;
-    font-size: 6.3rem;
-}
-}
+
 
 
 #game
