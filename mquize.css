@@ -125,20 +125,21 @@
     {
         font-size: 2rem;
     }
-/*     #start
+     #start
     {
         width: 30vw;
         height:6rem;
         margin-left: 10px;
-        font-size: 2rem;
+        font-size:2rem;
     }
     #next
     {
         width: 30vw;
         height:6rem;
         margin-left: 10px;
-        font-size: 1.9rem;
-    } */
+        font-size:2rem;
+        color:yellow;
+    } 
     #game
 {
     color: white;
