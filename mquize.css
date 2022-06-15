@@ -139,6 +139,17 @@
         margin-left: 10px;
         font-size: 1.9rem;
     }
+    #game
+{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    text-align: center;
+    margin-top: 30rem;
+    font-size: 6.4rem;
+}
     #options
     {
         margin-top: 13rem;
