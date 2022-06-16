@@ -141,16 +141,18 @@
         font-size:3rem;
     } 
     #game
-{
+   {
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     font-style: italic;
     text-align: center;
-    margin-top: 30rem;
+     width: 100vw;
+    height: 100vh;
+    padding-top:30rem;
     font-size: 6.4rem;
-}
+   }
     #options
     {
         margin-top: 13rem;
