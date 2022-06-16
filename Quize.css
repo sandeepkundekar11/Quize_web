@@ -233,7 +233,9 @@ html
     justify-content: center;
     font-style: italic;
     text-align: center;
-    margin-top: 6rem;
+    width: 100vw;
+    height: 100vh;
+    padding-top:20rem;
     font-size: 5rem;
 }
 
