@@ -127,16 +127,16 @@
     }
      #start
     {
-        width:35vw;
-        height:20rem;
+        width:40vw;
+        height:30rem;
         margin:10rem;
         font-size:3rem;
     }
     #next
     {
-        width:35vw;
+        width:40vw;
         margin:10rem;
-        height:20rem;
+        height:30rem;
         margin-left:10px;
         font-size:3rem;
     } 
